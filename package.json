@@ -3,8 +3,10 @@
   "version": "0.0.1",
   "description": "Simple library for generate cellular automatons",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "prepublish": "tsc"
   },
   "keywords": [
     "cellular-automatons",
