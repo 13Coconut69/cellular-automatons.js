@@ -22,10 +22,10 @@ export const nextGeneration = function (this: CellularAutomaton) {
             if (j > 0) countOfNeighbors += this.grid[i][j - 1];
             if (j + 1 < width) countOfNeighbors += this.grid[i][j + 1];
             if (this.grid[i][j] === 1) {
-                if (String(this.surviveRule).split("").map(num => +num === countOfNeighbors).includes(true)) line.push(1);
+                if (String(this.surviveRule).split("").some(num => +num === countOfNeighbors)) line.push(1);
                 else line.push(0);
             } else {
-                if (String(this.bornRule).split("").map(num => +num === countOfNeighbors).includes(true)) line.push(1);
+                if (String(this.bornRule).split("").some(num => +num === countOfNeighbors)) line.push(1);
                 else line.push(0);
             }
         }
